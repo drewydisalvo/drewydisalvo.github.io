@@ -4,5 +4,34 @@
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 500;
-	line-height: 26.4px;
+    line-height: 26.4px;
+    color: #FDEAF0;
+}
+.background {
+    background-color: #F5E9CE;
+}
+.bar {
+    background-color: #DDF1F0;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 20;
+    overflow: hidden;
+    background-color: #DDF1F0;
+}
+
+li {
+    float: left;
+    padding-left: 20px;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li :hover {
+    background-color: #111;
 }
