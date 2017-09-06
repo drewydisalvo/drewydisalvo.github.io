@@ -40,6 +40,7 @@
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
     color: rgba(85, 85, 85, 1);
     background-color: rgba(219, 248, 255, 1);
+    background: rgb(179, 238, 255); 
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle {
     border-color: #dbf8ff;
