@@ -1,17 +1,4 @@
-.row > .column {
-    padding: 0 8px;
-}
 
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.column {
-    float: left;
-    width: 25%;
-}
 
 /* The Modal (background) */
 .modal {
@@ -103,8 +90,8 @@
 
 img.demo {
 
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
     opacity: 0.6;
 }
 
@@ -112,10 +99,10 @@ img.demo {
     opacity: 1;
 }
 
-img.hover-shadow {
-    height: 200px;
-    width: 200px;
-    padding: 5px;
+img.hover-shadow{
+    height: 100%;
+    width: 100%;
+    padding: 5%;
     transition: 0.3s
 }
 
