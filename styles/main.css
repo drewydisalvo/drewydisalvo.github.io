@@ -28,18 +28,18 @@ div,body{
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
 #custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
     color: rgba(85, 85, 85, 1);
-    background-color: rgba(219, 248, 255, 1);
-    background: rgb(179, 238, 255); 
+    background-color: #B7E2E0;
+    background: #B7E2E0; 
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle {
-    border-color: #dbf8ff;
+    border-color: #C5F3F1;
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
 #custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
-    background-color: #dbf8ff;
+    background-color: #C5F3F1;
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
-    background-color: #dbf8ff;
+    background-color: #C5F3F1;
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
 #custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
