@@ -47,6 +47,7 @@ div,body{
 }
 .background {
     background-image: url("../images/homepage.jpg");
+    height:100vh;
     background-repeat: no-repeat;
     background-position: center;
     -webkit-background-size: cover;
