@@ -1,10 +1,10 @@
 function openItaly(){
     var fileName = "images/Photography/Italy_"
     var tempFileName;
-    var HTMLCode = '<div class="mySlides">\n <div class="numbertext">1 /24 </div> \n<img src="' + fileName+ '01.JPG " style="width:100%"> \n</div>\n';
+    var HTMLCode = "";
     var modal = document.getElementById("modalContent");
 
-    for(var i = 2; i < 24; i++){
+    for(var i = 1; i < 24; i++){
         if(i < 10){
             tempFileName = fileName + 0 + i;
         }
