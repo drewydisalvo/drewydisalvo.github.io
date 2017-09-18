@@ -41,17 +41,19 @@ div,body{
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle {
     border-color: #C5F3F1;
+    background-color: #000000;
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
 #custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
-    background-color: #FDFDFD;
+    background-color: #FFA4D2;
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
-    background-color: #55D8D1;
+    background-color: #FFA4D2;
 }
 #custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
 #custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
-    background-color: #c2f3ff;
+    background-color: #000000;
+
 }
 .background {
     background-image: url("../images/homepage.jpg");
