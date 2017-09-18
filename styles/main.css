@@ -4,7 +4,12 @@ div,body{
     color: #EEA9CB;
     
 }
-
+#title{
+    font-size: 50px;
+}
+#subtitle{
+    font-size: 20px;
+}
 #custom-bootstrap-menu.navbar-default .navbar-brand {
     color: rgba(119, 119, 119, 1);
 }
@@ -12,6 +17,8 @@ div,body{
     font-size: 15px;
     background: #9FC9C8;    
     background-color: #000000;
+    border-color: #000000;
+    border-radius: 0px;
 
 }
 #custom-bootstrap-menu.navbar-default .navbar-nav>li>a {
