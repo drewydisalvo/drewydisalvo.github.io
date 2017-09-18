@@ -75,5 +75,10 @@ div,body{
     position: relative;
     top: -14px
 }
-
-  
+.illustration{
+    object-fit: cover;
+}
+.showcase{
+    height: 275px;
+    width: 325px;
+}
