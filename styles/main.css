@@ -90,3 +90,11 @@ div,body{
     text-shadow: 0px 0px #755967;
     
 }
+.aboutme,h1{
+    font-size: 48px;
+}
+.aboutmeimg:hover {
+    transition-duration: .2s;
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+    transform: scale(1.1); 
+}
