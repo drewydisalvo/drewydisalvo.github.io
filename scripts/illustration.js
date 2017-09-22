@@ -15,7 +15,7 @@ function rightbttn(){
         index++;
         if(index == 33){
             index = 1; 
-            pageNum = 1;
+            pageNum = 0;
         }
     }
     setslide()
