@@ -3,7 +3,7 @@ document.getElementById("i3"), document.getElementById("i4"), document.getElemen
 document.getElementById("i6")]
 var imagePath = "images/Illustration/Illustrate_"
 pageNum = 0;
-index = 9;
+index = 7;
 function rightbttn(){    
     for(var i =0; i < imgArray.length; i++){
         if(index < 10){
@@ -30,5 +30,21 @@ function setslide(){
     imgArray[5].onclick = function onclick(event) { openModal(); currentSlide(6 + (6*pageNum)) }
 }
 function leftbttn(){
+    index = index - 6;
+    for(var i =0; i < imgArray.length; i++){
+        if(index == -1){
+            index = 33
+            pageNum = 1;            
+        }
+        if(index < 10){
+            imgArray[i].src = imagePath + "0" + index.toString() +".jpg"
+        }  
+        else{
+            imgArray[i].src = imagePath + index.toString() +".jpg"
+        }
+        index--;
+
+    }
+    setslide();
     pageNum--;
 }
