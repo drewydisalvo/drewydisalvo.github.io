@@ -1,16 +1,16 @@
 var imgArray = [document.getElementById("i1"), document.getElementById("i2"), 
 document.getElementById("i3"), document.getElementById("i4"), document.getElementById("i5"),
 document.getElementById("i6")]
-var imagePath = "images/Illustration/Illustrate_"
+var imagePath = "images/Illustration/thumbnails/Illustrate_"
 pageNum = 0;
 index = 7;
 function rightbttn(){    
     for(var i =0; i < imgArray.length; i++){
         if(index < 10){
-            imgArray[i].src = imagePath + "0" + index.toString() +".jpg"
+            imgArray[i].src = imagePath + "0" + index.toString() +"-min.jpg"
         }  
         else{
-            imgArray[i].src = imagePath + index.toString() +".jpg"
+            imgArray[i].src = imagePath + index.toString() +"-min.jpg"
         }
         index++;
         if(index == 33){
@@ -37,10 +37,10 @@ function leftbttn(){
             pageNum = 1;            
         }
         if(index < 10){
-            imgArray[i].src = imagePath + "0" + index.toString() +".jpg"
+            imgArray[i].src = imagePath + "0" + index.toString() +"-min.jpg"
         }  
         else{
-            imgArray[i].src = imagePath + index.toString() +".jpg"
+            imgArray[i].src = imagePath + index.toString() +"-min.jpg"
         }
         index--;
 
