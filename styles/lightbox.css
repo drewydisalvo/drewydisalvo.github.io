@@ -102,9 +102,10 @@ img.hover-shadow{
     height: 100%;
     width: 100%;
     padding: 5%;
-    transition: 0.3s
+    transition-duration: .2s
 }
 
 .hover-shadow:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+    transform: scale(1.1); 
 }
