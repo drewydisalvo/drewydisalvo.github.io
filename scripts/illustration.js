@@ -14,7 +14,7 @@ function rightbttn(){
             imgArray[i].src = imagePath + index.toString() +"-min.jpg"
         }
         index++;
-        if(index == 33){
+        if(index == 34){
             index = 1; 
         }
     }
