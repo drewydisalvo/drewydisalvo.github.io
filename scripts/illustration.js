@@ -33,6 +33,8 @@ function pullNum(src){
     var str;
     str = src.charAt(106) + src.charAt(107);
     num = parseInt(str);
+    alert(num);
+    
     return num;
 }
 function leftbttn(){
@@ -48,6 +50,8 @@ function leftbttn(){
             imgArray[i].src = imagePath + index.toString() +"-min.jpg"
         }
         index++;
+        if(index == 34)
+            index = 1;
     }
     setonclick();
 }
