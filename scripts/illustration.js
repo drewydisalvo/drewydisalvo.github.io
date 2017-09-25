@@ -3,7 +3,9 @@ document.getElementById("i3"), document.getElementById("i4"), document.getElemen
 document.getElementById("i6")]
 var imagePath = "images/Illustration/thumbnails/Illustrate_"
 index = 7;
-function rightbttn(){    
+function rightbttn(){
+    if(index >= 33)
+        index = 1;
     for(var i =0; i < imgArray.length; i++){
         if(index < 10){
             imgArray[i].src = imagePath + "0" + index.toString() +"-min.jpg"
@@ -16,9 +18,9 @@ function rightbttn(){
             index = 1; 
         }
     }
-    setslide()
+    setonclick()
 }
-function setslide(){
+function setonclick(){
     imgArray[0].onclick = function onclick(event) { openModal(); currentSlide(pullNum(imgArray[0].src)) }        
     imgArray[1].onclick = function onclick(event) { openModal(); currentSlide(pullNum(imgArray[1].src)) }        
     imgArray[2].onclick = function onclick(event) { openModal(); currentSlide(pullNum(imgArray[2].src)) }      
@@ -34,20 +36,18 @@ function pullNum(src){
     return num;
 }
 function leftbttn(){
-    function leftbttn(){
-        index = index - 12;
-        if(index <= 0){
-            index = 33 + index;
-        }
-        for(var i =0; i < imgArray.length; i++){
-            if(index < 10){
-                imgArray[i].src = imagePath + "0" + index.toString() +"-min.jpg"
-            }  
-            else{
-                imgArray[i].src = imagePath + index.toString() +"-min.jpg"
-            }
-            index++;
-        }
-        setslide();
+    index = index - 12;
+    if(index <= 0){
+        index = 33 + index;
     }
+    for(var i =0; i < imgArray.length; i++){
+        if(index < 10){
+            imgArray[i].src = imagePath + "0" + index.toString() +"-min.jpg"
+        }  
+        else{
+            imgArray[i].src = imagePath + index.toString() +"-min.jpg"
+        }
+        index++;
+    }
+    setonclick();
 }
