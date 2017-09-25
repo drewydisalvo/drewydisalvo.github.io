@@ -13,7 +13,7 @@ function openItaly(){
         }
         HTMLCode = HTMLCode + '<div class="mySlides">\n <div class="numbertext">' + i + '/24</div> \n<img src="' + tempFileName+ '.JPG " style="width:100%"> \n</div>\n'
     }
-    modal.innerHTML = HTMLCode + '<a class="prev" onclick="plusSlides(-1)">&#10094; Prev.</a>\n<a class="next" onclick="plusSlides(1)">Next. &#10095;</a>\n <div class="caption-container">\n<p id="caption"></p>\n</div>';
+    modal.innerHTML = HTMLCode + '<a class="prev" onclick="plusSlides(-1)">&#10094;</a>\n<a class="next" onclick="plusSlides(1)">&#10095;</a>\n <div class="caption-container">\n<p id="caption"></p>\n</div>';
     openModal();
     currentSlide(1);
 
