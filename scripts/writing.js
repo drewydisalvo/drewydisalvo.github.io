@@ -18,7 +18,7 @@ function typesandstripes(){
     
 }
 function download(){
-    window.open(viewer.src);
+    window.open(viewer.src + "1");
 }
 function mobilecheck(){
     var check = false;
