@@ -32,7 +32,9 @@ function pullNum(src){
     
     var num;
     var str;
-    str = src.charAt(106) + src.charAt(107);
+    var test = src.indexOf("_", 2);
+    alert(test);
+    str = src.charAt(test+1) + src.charAt(test+2);
     num = parseInt(str);    
     return num;
 }
