@@ -32,9 +32,7 @@ function pullNum(src){
     var num;
     var str;
     str = src.charAt(106) + src.charAt(107);
-    num = parseInt(str);
-    alert(num);
-    
+    num = parseInt(str);    
     return num;
 }
 function leftbttn(){
