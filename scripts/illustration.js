@@ -29,6 +29,7 @@ function setonclick(){
     imgArray[5].onclick = function onclick(event) { openModal(); currentSlide(pullNum(imgArray[5].src)) } 
 }
 function pullNum(src){
+    
     var num;
     var str;
     str = src.charAt(106) + src.charAt(107);
