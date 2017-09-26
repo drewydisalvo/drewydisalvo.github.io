@@ -29,11 +29,9 @@ function setonclick(){
     imgArray[5].onclick = function onclick(event) { openModal(); currentSlide(pullNum(imgArray[5].src)) } 
 }
 function pullNum(src){
-    
     var num;
     var str;
     var test = src.indexOf("_", 2);
-    alert(test);
     str = src.charAt(test+1) + src.charAt(test+2);
     num = parseInt(str);    
     return num;
