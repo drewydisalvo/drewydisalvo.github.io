@@ -105,3 +105,22 @@ div,body{
     cursor: pointer;
     text-decoration: underline;
 }
+.donwloadbttn{
+    background-color: black;
+    visibility: hidden;
+}
+.donwloadbttn:hover{
+    color: hotpink;
+    visibility: hidden;
+}
+@media all and (max-width: 600px) {
+    .navbar-nav {
+        margin: 7.5px 0px;
+    }   
+    .navbar .nav > li {
+        display: block;
+    }
+    .navbar .nav > li  img {
+        margin: auto;
+    }
+}
