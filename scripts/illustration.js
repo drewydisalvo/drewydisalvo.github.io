@@ -3,7 +3,7 @@ var numOfImages = 33
 var imgArray = [document.getElementById("i1"), document.getElementById("i2"), 
 document.getElementById("i3"), document.getElementById("i4"), document.getElementById("i5"),
 document.getElementById("i6")]
-var imagePath = "images/Illustration/Illustrate_"
+var imagePath = "images/Illustration/thumbnails/Illustrate_"
 var thumbnailPath = "images/Illustration/thumbnails/Illustrate_"
 var index = 7;
 var modal = document.getElementById("popupContent")
@@ -17,10 +17,10 @@ function loadAllSlides(){
     var currentHTML = modal.innerHTML;
     for(var i = 1; i < numOfImages+1; i++){
         if(i <  10){
-            chunk = chunk + " <div class='mySlides'> <div class='numbertext'>" + i.toString() +  "/ " + numOfImages.toString + "</div> <img src=" + imagePath + "0" + i.toString() + ".jpg> </div>";            
+            chunk = chunk + " <div class='mySlides'> <div class='numbertext'>" + i.toString() +  "/ " + numOfImages.toString() + "</div> <img src=" + imagePath + "0" + i.toString() + "-min.jpg> </div>";            
         }
         else{
-            chunk = chunk + " <div class='mySlides'> <div class='numbertext'>" + i.toString() +  " / " + numOfImages.toString + "</div> <img src=" + imagePath + i.toString() + ".jpg> </div>";
+            chunk = chunk + " <div class='mySlides'> <div class='numbertext'>" + i.toString() +  " / " + numOfImages.toString() + "</div> <img src=" + imagePath + i.toString() + "-min.jpg> </div>";
         }
     }
     modal.innerHTML = chunk + currentHTML;
