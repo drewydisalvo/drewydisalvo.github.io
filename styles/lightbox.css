@@ -12,15 +12,17 @@
     height: 100%;
     overflow: auto;
     background-color: black;
-    opacity: 70%;
+    opacity: 40%;
 }
 
 /* Modal Content */
 .modal-content {
     position: relative;
+    margin: auto;    
+    width: auto;
     background-color: #FEFEFE;
-    margin: auto;
-    padding: 20;
+
+    height: 70vh;
 }
 
 
@@ -43,14 +45,14 @@
 }
 
 .mySlides {
-    padding-left: 20vh;
-    padding-right: 20vh;
+    
     
     display: none;
 }
 
 .mySlides img{
-    max-height: 40vh;    
+    width: auto;    
+    height: 70vh;    
 }
 /* Next & previous buttons */
 .prev, .next {
@@ -112,7 +114,6 @@ img.hover-shadow{
     height: 100%;
     width: 100%;
     padding: 5%;
-    transition-duration: .2s
 }
 
 .hover-shadow:hover {
