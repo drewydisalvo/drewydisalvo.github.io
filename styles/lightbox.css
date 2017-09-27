@@ -12,6 +12,7 @@
     height: 100%;
     overflow: auto;
     background-color: black;
+    opacity: 70%;
 }
 
 /* Modal Content */
@@ -19,7 +20,7 @@
     position: relative;
     background-color: #FEFEFE;
     margin: auto;
-    padding: 0;
+    padding: 20;
 }
 
 
@@ -42,6 +43,9 @@
 }
 
 .mySlides {
+    padding-left: 20vh;
+    padding-right: 20vh;
+    
     display: none;
 }
 
@@ -73,6 +77,8 @@
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
     color:hotpink;
+    cursor: pointer;
+    
 }
 
 /* Number text (1/3 etc) */
@@ -110,6 +116,7 @@ img.hover-shadow{
 }
 
 .hover-shadow:hover {
+    cursor: pointer;
     /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
-    transform: scale(1.1); 
+    transform: scale(1.05); 
 }
