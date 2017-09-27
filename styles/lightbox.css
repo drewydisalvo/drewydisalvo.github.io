@@ -20,9 +20,8 @@
     background-color: #FEFEFE;
     margin: auto;
     padding: 0;
-    width: 90%;
-    max-width: 1200px;
 }
+
 
 /* The Close Button */
 .close {
@@ -46,6 +45,9 @@
     display: none;
 }
 
+.mySlides img{
+    max-height: 40vh;    
+}
 /* Next & previous buttons */
 .prev, .next {
     cursor: pointer;

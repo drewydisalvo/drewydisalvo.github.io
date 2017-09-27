@@ -1,10 +1,28 @@
+numOfImages = 33
+
 var imgArray = [document.getElementById("i1"), document.getElementById("i2"), 
 document.getElementById("i3"), document.getElementById("i4"), document.getElementById("i5"),
 document.getElementById("i6")]
 var imagePath = "images/Illustration/thumbnails/Illustrate_"
 index = 7;
+var modal = document.getElementById("popupContent")
+
+window.onload = function fillPopup(){
+    var path = "images/Illustration/Illustrate_"
+    var chunk = "";
+    var currentHTML = modal.innerHTML;
+    for(var i = 1; i < numOfImages+1; i++){
+        if(i <  10){
+            chunk = chunk + " <div class='mySlides'> <div class='numbertext'>" + i.toString() +  "/ 33</div> <img src=" + path + "0" + i.toString() + ".jpg> </div>";            
+        }
+        else{
+            chunk = chunk + " <div class='mySlides'> <div class='numbertext'>" + i.toString() +  " / 33</div> <img src=" + path + i.toString() + ".jpg> </div>";
+        }
+    }
+    modal.innerHTML = chunk + currentHTML;
+}
 function rightbttn(){
-    if(index >= 33)
+    if(index >= numOfImages)
         index = 1;
     for(var i =0; i < imgArray.length; i++){
         if(index < 10){
@@ -14,7 +32,7 @@ function rightbttn(){
             imgArray[i].src = imagePath + index.toString() +"-min.jpg"
         }
         index++;
-        if(index == 34){
+        if(index == numOfImages+1){
             index = 1; 
         }
     }
@@ -39,7 +57,7 @@ function pullNum(src){
 function leftbttn(){
     index = index - 12;
     if(index <= 0){
-        index = 33 + index;
+        index = numOfImages + index;
     }
     for(var i =0; i < imgArray.length; i++){
         if(index < 10){
@@ -49,7 +67,7 @@ function leftbttn(){
             imgArray[i].src = imagePath + index.toString() +"-min.jpg"
         }
         index++;
-        if(index == 34)
+        if(index == numOfImages+1)
             index = 1;
     }
     setonclick();
