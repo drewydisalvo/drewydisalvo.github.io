@@ -128,6 +128,8 @@ function setText(n){
       title.innerHTML = "<i>Plant</i> (Newsprint & graphite)"      
       break;
     default:
+      title.innerHTML = "<i>Drewy DiSalvo</i>"      
+    
   }
 
 }
