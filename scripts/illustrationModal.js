@@ -1,10 +1,11 @@
+//Controller for the Popup Modal on the illustration Page. 
+
 var imagePath = "images/Illustration/Illustrate_"
 var numImages = 33
 var slideIndex = 1;
 
 function plusSlides(n) {
   slideIndex = slideIndex+n;
-  alert(slideIndex)
   if(slideIndex > numImages)
     slideIndex = 1;
   if(slideIndex < 1)
