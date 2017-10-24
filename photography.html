@@ -50,14 +50,14 @@
     </div>
     
     <div class = "col-md-1 col-sm-1"></div>    
-    <div class = "col-md-5 col-sm-5 col-xs-10">
+    <div class = "alb col-md-5 col-sm-5 col-xs-10">
         <img src="images/Photography/Italy_07.JPG" onclick="openItaly();" class="hover-shadow">
         <br>
         <h4>ITALY 2016</h4>
         <h6>ROME, FLORENCE, VENICE, SALERNO, CAPRI, POSITANO, ORVIETO</h6>
     </div>
     <div class = "col-xs-2"></div>
-    <div class = "col-md-5 col-sm-5 col-xs-10">
+    <div class = "alb col-md-5 col-sm-5 col-xs-10">
         <img src="images/Photography/Japan_01.jpg" onclick="openJapan();" class="hover-shadow">
         <br>
         <h4>JAPAN 2017</h4>
@@ -65,10 +65,38 @@
     </div>
     <div class = "col-md-1 col-sm-1"></div>        
 </body>
-<div id="myModal" class="modal">
-    <span class="close cursor" onclick="closePhotography()">&times;</span>
-    <div class="modal-content" id = "modalContent">
-
+<div class="modal fade modal-black" id="photoModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <!-- CONTENT FILLS FROM lightbox.js -->
+            <div class="modal-content">
+                <div class="modal-header" style="padding:35px 50px;">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <a class="navbar-brand" href="index.html"><img class = "icon"src = "images/Resources/icon.jpg"></a> 
+                    <h4 id = "imgTitle">Test</h4>
+                </div>
+                <div id = "content" class="modal-body" style="padding:40px 50px;">
+                    <a class="prev arrow" onclick="leftClick()">&#10094;</a>
+                    <a class="next arrow" onclick="rightClick()">&#10095;</a>
+                    <div class= "row">
+                        <div class = "col-lg-2 col-xs-2 col-md-2"></div>
+                        <div class = "col-lg-8 col-xs-8 col-md-8"></div>
+                            <img style = "width: 100%; height: auto;" id = "MainImg" src = ""></img>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div id = "mfooter" class="modal-footer">
+    
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+<script>
+$(document).ready(function(){
+            $(".alb").children('img').click(function(){ 
+                $("#photoModal").modal();
+            });
+        });
+</script>
 <script src="scripts/photoalbum.js"></script>    

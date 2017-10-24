@@ -1,50 +1,49 @@
+var fileName
+var title
+var index = 1
+var numJapan = 6
+var numItaly = 24
+var image = document.getElementById("MainImg");
+var htmlTitle = document.getElementById("imgTitle");
+
 function openItaly(){
-    var fileName = "images/Photography/Italy_"
-    var tempFileName;
-    var HTMLCode = "";
-    var modal = document.getElementById("modalContent");
+    title = "Italy"
+    htmlTitle.innerHTML = title + " 2016"
+    fileName = "images/Photography/Italy_"
+    image.src = fileName + "01.jpg" 
 
-    for(var i = 1; i < 24; i++){
-        if(i < 10){
-            tempFileName = fileName + 0 + i;
-        }
-        else{
-            tempFileName = fileName + i;
-        }
-        HTMLCode = HTMLCode + '<div class="mySlides">\n <div class="numbertext">' + i + '/24</div> \n<img src="' + tempFileName+ '.JPG " style="width:100%"> \n</div>\n'
-    }
-    modal.innerHTML = HTMLCode + '<a class="prev" onclick="plusSlides(-1)">&#10094;</a>\n<a class="next" onclick="plusSlides(1)">&#10095;</a>\n <div class="caption-container">\n<p id="caption"></p>\n</div>';
-    openModal();
-    currentSlide(1);
-
-}
-function closePhotography(){
-    var modal = document.getElementById("modalContent");
-  
-    closeModal();
-   modal.innerHTML = "";  
 }
 function openJapan(){
-    var fileName = "images/Photography/Japan_"
-    var tempFileName;
-    var HTMLCode = "";
-    var modal = document.getElementById("modalContent");
+    title = "Japan"
+    htmlTitle.innerHTML = title + " 2017"    
+    fileName = "images/Photography/Japan_"
+    var image = document.getElementById("MainImg");
+    image.src = fileName + "01.jpg" 
 
-    for(var i = 1; i < 7; i++){
-        if(i < 10){
-            tempFileName = fileName + 0 + i;
-        }
-        else{
-            tempFileName = fileName + i;
-        }
-        HTMLCode = HTMLCode + '<div class="mySlides">\n <div class="numbertext">' + i + '/6</div> \n<img src="' + tempFileName+ '.jpg " style="width:100%"> \n</div>\n'
-    }
-    /*for(var i = 29; i < 37; i++){
-        tempFileName = fileName + i;
-        HTMLCode = HTMLCode + '<div class="mySlides">\n <div class="numbertext">' + i + '/24</div> \n<img src="' + tempFileName+ '.RAF " style="width:100%"> \n</div>\n'
-    }*/
-    modal.innerHTML = HTMLCode + '<a class="prev" onclick="plusSlides(-1)">&#10094;</a>\n<a class="next" onclick="plusSlides(1)">&#10095;</a>\n <div class="caption-container">\n<p id="caption"></p>\n</div>';
-    openModal();
-    currentSlide(1);
-
+}
+function rightClick(){
+    index = index + 1
+    checkBounds()
+    if(index < 10)
+        image.src = fileName + "0" + index + ".jpg" 
+    else
+        image.src = fileName + index + ".jpg" 
+}
+function leftClick(){
+    index--
+    checkBounds()
+    if(index < 10)
+        image.src = fileName + "0" + index + ".jpg" 
+    else
+        image.src = fileName + index + ".jpg" 
+}
+function checkBounds(){
+    if(title == "Japan 2017" && index > numJapan)
+        index = 1
+    if(title == "Japan 2017" && index < 1)
+        index = numJapan
+    if(title == "Italy 2016" && index > numItaly)
+        index = 1
+    if(title == "Italy 2016" && index < 1)
+        index = numItaly
 }
