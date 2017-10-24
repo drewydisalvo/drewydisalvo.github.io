@@ -10,6 +10,7 @@ function openItaly(){
     index = 1
     title = "Italy"
     htmlTitle.innerHTML = title + " 2016"
+    var image = document.getElementById("MainImg");    
     fileName = "images/Photography/Italy_"
     image.src = fileName + "01.jpg" 
 
