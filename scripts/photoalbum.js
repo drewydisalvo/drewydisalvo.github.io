@@ -12,7 +12,7 @@ function openItaly(){
     htmlTitle.innerHTML = title + " 2016"
     var image = document.getElementById("MainImg");    
     fileName = "images/Photography/Italy_"
-    image.src = fileName + "01.jpg" 
+    image.src = fileName + "01.JPG" 
 
 }
 function openJapan(){
@@ -21,24 +21,24 @@ function openJapan(){
     htmlTitle.innerHTML = title + " 2017"    
     fileName = "images/Photography/Japan_"
     var image = document.getElementById("MainImg");
-    image.src = fileName + "01.jpg" 
+    image.src = fileName + "01.JPG" 
 
 }
 function rightClick(){
     index++
     checkBounds()
     if(index < 10)
-        image.src = fileName + "0" + index + ".jpg" 
+        image.src = fileName + "0" + index + ".JPG" 
     else
-        image.src = fileName + index + ".jpg" 
+        image.src = fileName + index + ".JPG" 
 }
 function leftClick(){
     index--
     checkBounds()
     if(index < 10)
-        image.src = fileName + "0" + index + ".jpg" 
+        image.src = fileName + "0" + index + ".JPG" 
     else
-        image.src = fileName + index + ".jpg" 
+        image.src = fileName + index + ".JPG" 
 }
 function checkBounds(){
     if(title == "Japan" && index > numJapan)
