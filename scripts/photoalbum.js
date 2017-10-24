@@ -7,6 +7,7 @@ var image = document.getElementById("MainImg");
 var htmlTitle = document.getElementById("imgTitle");
 
 function openItaly(){
+    index = 1
     title = "Italy"
     htmlTitle.innerHTML = title + " 2016"
     fileName = "images/Photography/Italy_"
@@ -14,6 +15,7 @@ function openItaly(){
 
 }
 function openJapan(){
+    index = 1    
     title = "Japan"
     htmlTitle.innerHTML = title + " 2017"    
     fileName = "images/Photography/Japan_"
