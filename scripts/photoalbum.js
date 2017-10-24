@@ -22,7 +22,7 @@ function openJapan(){
 
 }
 function rightClick(){
-    index = index + 1
+    index++
     checkBounds()
     if(index < 10)
         image.src = fileName + "0" + index + ".jpg" 
@@ -38,12 +38,12 @@ function leftClick(){
         image.src = fileName + index + ".jpg" 
 }
 function checkBounds(){
-    if(title == "Japan 2017" && index > numJapan)
+    if(title == "Japan" && index > numJapan)
         index = 1
-    if(title == "Japan 2017" && index < 1)
+    if(title == "Japan" && index < 1)
         index = numJapan
-    if(title == "Italy 2016" && index > numItaly)
+    if(title == "Italy" && index > numItaly)
         index = 1
-    if(title == "Italy 2016" && index < 1)
+    if(title == "Italy" && index < 1)
         index = numItaly
 }
