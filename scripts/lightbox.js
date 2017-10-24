@@ -1,10 +1,16 @@
 var imagePath = "images/Illustration/Illustrate_"
-
+var numImages = 33
 var slideIndex = 1;
-showSlides(slideIndex);
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  slideIndex = slideIndex+n;
+  alert(slideIndex)
+  if(slideIndex > numImages)
+    slideIndex = 1;
+  if(slideIndex < 1)
+    slideIndex = numImages;
+  
+  showSlides(slideIndex);
 }
 
 function currentSlide(n) {
