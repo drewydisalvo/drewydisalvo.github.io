@@ -8,7 +8,6 @@
     <link rel="stylesheet" href = "styles/bootstrap.min.css">
     <link rel="stylesheet" href = "styles/bootstrap-theme.min.css">
     <link rel="stylesheet" href = "styles/lightbox.css">
-    <script src="scripts/lightbox.js"></script>
     <script src="scripts/jquery.min.js"></script>
     <script src ="scripts/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="styles/main.css" />
@@ -51,35 +50,64 @@
     <a class="prev" onclick="leftbttn()">&#10094;</a>       
     <div class = "row" style ="padding-left: 50px; padding-right: 50px;">
         <div class = "showcase col-sm-4 col-md-4 col-xs-6 col-lg-4">
-            <img id= "i1" src="images/Illustration/thumbnails/Illustrate_01-min.jpg" onclick="openModal();currentSlide(1)" class="illustration hover-shadow">
+            <img id= "i1" src="images/Illustration/thumbnails/Illustrate_01-min.jpg" onclick="currentSlide(1)" class="illustration hover-shadow">
         </div>
         <div class = "showcase col-sm-4 col-md-4 col-xs-6 col-lg-4">
-            <img id="i2" src="images/Illustration/thumbnails/Illustrate_02-min.jpg" onclick="openModal();currentSlide(2)" class="illustration hover-shadow">
+            <img id="i2" src="images/Illustration/thumbnails/Illustrate_02-min.jpg" onclick="currentSlide(2)" class="illustration hover-shadow">
         </div>
         <div class = "showcase col-sm-4 col-md-4 col-xs-6 col-lg-4">
-            <img id="i3" src="images/Illustration/thumbnails/Illustrate_03-min.jpg" onclick="openModal();currentSlide(3)" class="illustration hover-shadow">
+            <img id="i3" src="images/Illustration/thumbnails/Illustrate_03-min.jpg" onclick="currentSlide(3)" class="illustration hover-shadow">
         </div>
         <div class = "showcase col-sm-4 col-md-4 col-xs-6 col-lg-4">
-            <img id ="i4" src="images/Illustration/thumbnails/Illustrate_04-min.jpg" onclick="openModal();currentSlide(4)" class="illustration hover-shadow">
+            <img id ="i4" src="images/Illustration/thumbnails/Illustrate_04-min.jpg" onclick="currentSlide(4)" class="illustration hover-shadow">
         </div>
         <div class = "showcase col-sm-4 col-md-4 col-xs-6 col-lg-4">
-            <img id ="i5" src="images/Illustration/thumbnails/Illustrate_05-min.jpg" onclick="openModal();currentSlide(5)" class="illustration hover-shadow">
+            <img id ="i5" src="images/Illustration/thumbnails/Illustrate_05-min.jpg" onclick="currentSlide(5)" class="illustration hover-shadow">
         </div>
         <div class = "showcase col-sm-4 col-md-4 col-xs-6 col-lg-4">
-            <img id ="i6" src="images/Illustration/thumbnails/Illustrate_06-min.jpg" onclick="openModal();currentSlide(6)" class="illustration hover-shadow">
+            <img id ="i6" src="images/Illustration/thumbnails/Illustrate_06-min.jpg" onclick="currentSlide(6)" class="illustration hover-shadow">
         </div>
     </div>
 </body>
+   <!--Pop-up Modal -->
+   <div class="modal fade modal-black" id="illModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <!-- CONTENT FILLS FROM lightbox.js -->
+        <div class="modal-content">
+            <div class="modal-header" style="padding:35px 50px;">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <a class="navbar-brand" href="index.html"><img class = "icon"src = "images/Resources/icon.jpg"></a> 
+                <h4 id = "imgTitle">Test</h4>
+            </div>
+            <div id = "content" class="modal-body" style="padding:40px 50px;">
+                <a class="prev arrow" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next arrow" onclick="plusSlides(1)">&#10095;</a>
+                <div class= "row">
+                    <div class = "col-lg-2 col-xs-2 col-md-2"></div>
+                    <div class = "col-lg-8 col-xs-8 col-md-8"></div>
+                        <img style = "width: 100%; height: auto;" id = "MainImg" src = ""></img>
+                    </div>
+                    
+                </div>
+            </div>
+            <div id = "mfooter" class="modal-footer">
 
-<div id="myModal" class="modal">
-    <span class="close cursor" onclick="closeModal()">&times;</span>
-    <div id= "popupContent" class="modal-content">
-
-      
+            </div>
+        </div>
     </div>
-    <a class="prev arrow" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next arrow" onclick="plusSlides(1)">&#10095;</a>
 </div>
 
-  <script src="scripts/illustration.js"></script>
-  
+
+<!--Script that opens the modal when 
+    an illustration is clicked --> 
+<script>
+    $(document).ready(function(){
+        $(".showcase").children('img').click(function(){ 
+            $("#illModal").modal();
+        });
+    });
+</script>
+<script src ="scripts/illustration.js"></script>
+<script src="scripts/lightbox.js"></script>
+
