@@ -30,7 +30,7 @@ function pullNum(src){
     var str;
     var test = src.indexOf("_", 2);
     str = src.charAt(test+1) + src.charAt(test+2);
-    num = parseInt(str);    
+    num = parseInt(str);
     return num;
 }
 //When the left button is clicked. 

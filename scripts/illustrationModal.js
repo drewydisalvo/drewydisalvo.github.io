@@ -1,5 +1,4 @@
 //Controller for the Popup Modal on the illustration Page. 
-
 var imagePath = "images/Illustration/Illustrate_"
 var numImages = 33
 var slideIndex = 1;
@@ -10,7 +9,6 @@ function plusSlides(n) {
     slideIndex = 1;
   if(slideIndex < 1)
     slideIndex = numImages;
-  
   showSlides(slideIndex);
 }
 
@@ -130,7 +128,5 @@ function setText(n){
       break;
     default:
       title.innerHTML = "<i>Drewy DiSalvo</i>"      
-    
   }
-
 }
