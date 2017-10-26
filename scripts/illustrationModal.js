@@ -18,11 +18,20 @@ function currentSlide(n) {
 
 function showSlides(n) {
   var img = document.getElementById('MainImg')
+  img.style.visibility = 'hidden';
   if (n < 10)
     img.src = imagePath + "0" + n + ".jpg"
   else
     img.src = imagePath + n + ".jpg"
   setText(n);
+  img.addEventListener("load", function () {
+    
+    //Img loaded
+    img.style.visibility = 'visible';
+    
+    });
+  
+  
 }
 function setText(n){
   var title = document.getElementById('imgTitle')
