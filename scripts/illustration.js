@@ -35,6 +35,7 @@ function pullNum(src){
 }
 //When the left button is clicked. 
 function leftbttn(){
+    toggleHidden();    
     index = index - 12;
     if(index <= 0){
         index = numOfImages + index;
@@ -51,9 +52,11 @@ function leftbttn(){
             index = 1;
     }
     setonclick();
+    toggleHidden()
 }
 //If Right button is clicked
 function rightbttn(){
+    toggleHidden();
     if(index >= numOfImages)
         index = 1;
     for(var i =0; i < imgArray.length; i++){
@@ -69,4 +72,33 @@ function rightbttn(){
         }
     }
     setonclick()
+    toggleHidden();    
+}
+function toggleHidden(){
+    for(var i = 0; i < imgArray.length; i++){
+        if(imgArray[i].style.visibility == null || imgArray[i].style.visibility== "" || imgArray[i].style.visibility== 'visible')
+            imgArray[i].style.visibility = ("hidden");
+        else{
+            toggleIndividual(imgArray[i])
+        }
+    
+    }
+}
+function toggleIndividual(el){
+    el.addEventListener("load", function () {
+        
+        //Img loaded
+        el.style.visibility = "visible";
+        
+        
+    });
+}
+window.onload = function load(){
+    imgArray = [document.getElementById("i1"), document.getElementById("i2"), 
+    document.getElementById("i3"), document.getElementById("i4"), document.getElementById("i5"),
+    document.getElementById("i6")]
+    for(var i = 0; i < imgArray.length; i++){
+        //toggleIndividual(imgArray[i])   
+        imgArray[i].style.visibility = "visible";
+    }
 }

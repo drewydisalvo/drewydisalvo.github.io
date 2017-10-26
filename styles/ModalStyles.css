@@ -15,8 +15,8 @@
     padding: 16px;
     margin-top: -50px;
     color: pink;
-    font-weight: bold;
-    font-size: 20px;
+    font-weight: 50;
+    font-size: 30px;
     transition: 0.2s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
@@ -43,7 +43,7 @@
 .prev:hover, .next:hover {
     color:hotpink;
     cursor: pointer;
-    
+    text-decoration: initial;
 }
 
 /* Number text (1/3 etc) */

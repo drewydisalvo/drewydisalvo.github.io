@@ -27,18 +27,23 @@ function openJapan(){
 function rightClick(){
     index++
     checkBounds()
+    image.style.visibility = 'hidden';    
     if(index < 10)
         image.src = fileName + "0" + index + ".JPG" 
     else
         image.src = fileName + index + ".JPG" 
+    image.style.visibility = 'visible';
 }
 function leftClick(){
     index--
     checkBounds()
+    image.style.visibility = 'hidden';        
     if(index < 10)
         image.src = fileName + "0" + index + ".JPG" 
     else
         image.src = fileName + index + ".JPG" 
+    image.style.visibility = 'visible';
+        
 }
 function checkBounds(){
     if(title == "Japan" && index > numJapan)
